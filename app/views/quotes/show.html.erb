@@ -1,0 +1,38 @@
+<div class="pull-right">
+  <%= link_to 'Edit', edit_quote_path(@quote), class:'btn btn-default' %>
+  <%= link_to 'All Quotes', quotes_path, class:'btn btn-default' %>
+</div>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @quote.user %>
+
+  </p>
+
+<p>
+  <strong>Quote:</strong>
+  <%= @quote.quote %>
+  </p>
+
+<p>
+  <div class="row">
+    <div class="col-md-4">
+      <strong>Note:</strong>
+      <%= @quote.note %>
+    </div>
+
+    <div class="col-md-4">
+      <strong>Biblical Reference:</strong>
+      <%= @quote.biblical_ref %>
+    </div>
+
+    <div class="col-md-4">
+      <strong>Modern Reference:</strong>
+      <%= @quote.modern_ref %>
+    </div>
+  </div>
+</p>
+
+
