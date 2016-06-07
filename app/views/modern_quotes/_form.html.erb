@@ -1,0 +1,17 @@
+<%= form_for(@modern_quote) do |f| %>
+  <% if @modern_quote.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@modern_quote.errors.count, "error") %> prohibited this modern_quote from being saved:</h2>
+
+      <ul>
+      <% @modern_quote.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

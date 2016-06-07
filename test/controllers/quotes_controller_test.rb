@@ -21,7 +21,7 @@ class QuotesControllerTest < ActionController::TestCase
       post :create, quote: { user: @quote.user }
     end
 
-    assert_redirected_to quote_path(assigns(:quote))
+    assert_redirected_to quotes_path
   end
 
   test "should show quote" do
@@ -36,7 +36,7 @@ class QuotesControllerTest < ActionController::TestCase
 
   test "should update quote" do
     patch :update, id: @quote, quote: { user: @quote.user }
-    assert_redirected_to quote_path(assigns(:quote))
+    assert_redirected_to quotes_path
   end
 
   test "should destroy quote" do
