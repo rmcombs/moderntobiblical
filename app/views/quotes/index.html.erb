@@ -19,13 +19,13 @@
     <tbody>
     <% @quotes.each do |quote| %>
         <tr>
-          <td><%= link_to "#{quote.quote}", quote.quote %></td>
+          <td><%= link_to "#{quote.quote}", quote %></td>
           <td><%= quote.modern_ref %></td>
           <td><%= quote.biblical_ref %></td>
           <td><%= quote.user %></td>
           <td>
             <%= link_to 'Edit', edit_quote_path(quote), class: "btn btn-primary" %>
-            <%= link_to 'Destroy', quote, method: :delete, data: {confirm: 'Are you sure?'}, class: "btn btn-danger" %>
+            <%= link_to 'Delete', quote, method: :delete, data: {confirm: 'Are you sure?'}, class: "btn btn-danger" %>
           </td>
         </tr>
     <% end %>
