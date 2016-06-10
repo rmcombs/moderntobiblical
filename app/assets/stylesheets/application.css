@@ -13,3 +13,7 @@
  *= require_tree .
  *= require_self
  */
+
+.truncate_50 {
+    width: 50%;
+}

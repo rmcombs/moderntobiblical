@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
+  devise_for :users
+
   resources :modern_quotes
   resources :quotes
   resources :static_pages
+
 
   get 'home', to: 'static_pages#home'
 
