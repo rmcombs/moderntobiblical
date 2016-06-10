@@ -7,6 +7,11 @@ class StaticPagesController < ApplicationController
     @static_pages = StaticPage.all
   end
 
+  # GET /home
+  def home
+
+  end
+
   # GET /static_pages/1
   # GET /static_pages/1.json
   def show

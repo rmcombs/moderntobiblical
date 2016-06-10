@@ -1,38 +1,51 @@
 <div class="pull-right">
-  <%= link_to 'Edit', edit_quote_path(@quote), class:'btn btn-default' %>
-  <%= link_to 'All Quotes', quotes_path, class:'btn btn-default' %>
+  <%= link_to 'Edit', edit_quote_path(@quote), class: 'btn btn-default' %>
+  <%= link_to 'All Quotes', quotes_path, class: 'btn btn-default' %>
 </div>
 
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>User:</strong>
+  <strong>Submitted by:</strong>
   <%= @quote.user %>
 
-  </p>
+</p>
 
-<p>
-  <strong>Quote:</strong>
-  <%= @quote.quote %>
-  </p>
 
-<p>
-  <div class="row">
-    <div class="col-md-4">
-      <strong>Note:</strong>
-      <%= @quote.note %>
-    </div>
-
-    <div class="col-md-4">
-      <strong>Biblical Reference:</strong>
-      <%= @quote.biblical_ref %>
-    </div>
-
-    <div class="col-md-4">
-      <strong>Modern Reference:</strong>
-      <%= @quote.modern_ref %>
+<div class="row">
+  <div class="col-md-6">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <strong>Quote</strong>
+      </div>
+      <div class="panel-body">
+        <p>
+          <%= @quote.quote %>
+        </p>
+      </div>
     </div>
   </div>
-</p>
+  <div class="col-md-6">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <strong>Biblical Reference</strong>
+      </div>
+      <div class="panel-body">
+        <%= @quote.biblical_ref %>
+      </div>
+      <div class="panel-heading">
+        <strong>Modern Reference</strong>
+      </div>
+      <div class="panel-body">
+        <%= @quote.modern_ref %>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="col-md-4">
+  <strong>Note:</strong>
+  <%= @quote.note %>
+</div>
+
 
 
